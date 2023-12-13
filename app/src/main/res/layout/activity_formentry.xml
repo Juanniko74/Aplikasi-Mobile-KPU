@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".formentry">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Form Entry"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textatas"/>
+
+    <!-- NIK -->
+    <LinearLayout
+        android:id="@+id/nik1"
+        android:layout_below="@id/textatas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIK       : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radiuscorner"
+            android:id="@+id/nik"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <!-- Nama -->
+    <LinearLayout
+        android:id="@+id/nama1"
+        android:layout_below="@id/nik1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama   : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radiuscorner"
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <!-- No HP -->
+    <LinearLayout
+        android:id="@+id/Nohp1"
+        android:layout_below="@id/nama1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No HP   : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radiuscorner"
+            android:id="@+id/nohp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <!-- Jenis Kelamin -->
+    <LinearLayout
+        android:id="@+id/jeniskelamin1"
+        android:layout_below="@id/Nohp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JK          : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupJenisKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Radio Button untuk Laki-Laki -->
+            <RadioButton
+                android:id="@+id/jkpria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L"
+                android:textSize="25dp"
+                android:layout_marginLeft="45dp"
+                android:textAllCaps="false"
+                />
+
+            <!-- Radio Button untuk Perempuan -->
+            <RadioButton
+                android:id="@+id/jkwanita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P"
+                android:textSize="25dp"
+                android:layout_marginLeft="90dp"
+                android:textAllCaps="false"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Tanggal -->
+    <LinearLayout
+        android:id="@+id/tanggal1"
+        android:layout_below="@id/jeniskelamin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radiuscorner"
+            android:id="@+id/tanggal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <!-- Alamat -->
+    <LinearLayout
+        android:id="@+id/alamat1"
+        android:layout_below="@id/tanggal1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat  : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radiuscorner"
+            android:id="@+id/alamat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <!-- Tombol Cek Lokasi -->
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btnceklok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cek Lokasi"
+        android:layout_below="@id/alamat1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="110dp"/>
+
+    <!-- Gambar -->
+    <LinearLayout
+        android:id="@+id/gambar1"
+        android:layout_below="@id/btnceklok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gambar : "
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:id="@+id/gambar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/gambar1"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/baseline_image_search_24"
+            android:onClick="onImageViewGambarClick"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gambar1"
+        android:text="Submit">
+
+    </Button>
+
+
+</RelativeLayout>
